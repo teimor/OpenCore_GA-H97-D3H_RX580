@@ -172,20 +172,20 @@ Thanks to [Andrii Korzh][25] for the his repsotory, knowledge sharing and permis
 [5]: https://github.com/acidanthera/WhateverGreen/releases
 
 [6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
-[7]: https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/haswell.html#platforminfo
+[7]: https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo
 [8]: https://github.com/acidanthera/IntelMausi/releases
 [9]: https://github.com/acidanthera/AppleSupportPkg
 [13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
 [14]: https://github.com/acidanthera/MacInfoPkg
 [15]: https://www.gigabyte.com/Motherboard/GA-H97-D3H-rev-10/support#support-dl-bios
-[16]: https://dortania.github.io/OpenCore-Desktop-Guide/
+[16]: https://dortania.github.io/OpenCore-Install-Guide/
 [17]: https://github.com/korzhyk/OpenCore_GA-H97M-D3H
-[18]: https://dortania.github.io/OpenCore-Desktop-Guide/extras/gui.html#setting-up-opencores-gui
+[18]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui
 [19]: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
 [20]:https://github.com/acidanthera/OcBinaryData
-[21]: https://dortania.github.io/USB-Map-Guide/#macos-and-the-15-port-limit
-[22]: https://dortania.github.io/OpenCore-Desktop-Guide/post-install/security.html#scanpolicy
-[23]: https://dortania.github.io/Getting-Started-With-ACPI/ssdt-easy.html
+[21]: https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit
+[22]: https://dortania.github.io/OpenCore-Post-Install/universal/security.html#scanpolicy
+[23]: https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html
 [24]: https://www.aliexpress.com/item/33034394024.html
 [25]: https://github.com/korzhyk
 [100]: _static/images/about.png "Abount this mac"
