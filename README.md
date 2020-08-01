@@ -146,7 +146,7 @@ Due to these limits disabled interfaces are `HS05, HS06, HS07, HS08 and HS13`. T
 
 
 
-Thanks to [Andrii Korzh][25] for the his repsotory, knowledge sharing and permission.
+Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission.
 
 ---------
 
