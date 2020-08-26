@@ -9,7 +9,8 @@
 * 4×8GB Kingston DDR3 1600MHz
 * XFX Radeon RX 580 GTS XXX Edition 8GB (May work on any other versions)
 * Samsung 860 EVO 500GB (macOS)
-* [Fenvi FV-HB1200][24] WiFi BT PCIe Card (BCM94360CS2 Based) 
+* [Fenvi FV-HB1200][24] WiFi BT PCIe Card (BCM94360CS2 Based)
+* Dell P2418D QHD (Monitor) 
 
 ### **Before you start make sure you have**
 
@@ -140,17 +141,31 @@ Due to these limits disabled interfaces are `HS05, HS06, HS07, HS08 and HS13`. T
 
 *For Internal USB ports like Bluetooth - use UsbConnector = `255`*
 
+----
+
+### Enable HiDPI for Dell P2418D
+
+![dell_p2418d_hidpi][106]
+
+Use [one-key-hidpi][26] to Enable HiDPI on Dell monitor, and have a "Native" Scaled in System Preferences.
+
+1. Turn **off** System Integrity Protection(SIP):
+   1. Restart & enter into **Recovery**.
+   2. Choose Utilities > Terminal.
+   3. Run `csrutil disable`
+   4. Restart & enter into **macOS**.
+2. Run [one-key-hidpi][26] script and set resolution config to `2560x1440 Display`
+3. Reboot and check that everthing is working currectly.
+4. Turn **on** System Integrity Protection(SIP):
+   1. Restart & enter into **Recovery**.
+   2. Choose Utilities > Terminal.
+   3. Run `csrutil enable`
+   4. Restart & enter into **macOS**.
+5. After reboot check everthing is working currectly and check SIP enabled by running `csrutil status` in Terminal.
+
 ## Issues
 
 1. None :)
-
-
-
-Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission.
-
----------
-
-
 
 
 
@@ -179,10 +194,12 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 [23]: https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html
 [24]: https://www.aliexpress.com/item/33034394024.html
 [25]: https://github.com/korzhyk
+[26]: https://github.com/xzhih/one-key-hidpi
 [100]: _static/images/about.png "Abount this mac"
 [101]: _static/images/usb_mapping.png "USB Mapping"
 [102]: _static/images/bios_features.png "BIOS Features"
 [103]: _static/images/bios_peripherals.png "BIOS Peripherals"
 [104]: _static/images/cfg_unlock.png "MSR 0xE2 off"
 [105]: _static/images/config_device_properties_rx580.png
+[106]: _static/images/dell_p2418d_hidpi.png
 
