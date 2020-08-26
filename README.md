@@ -16,8 +16,8 @@
 
 * Working hardware
 * [BIOS][10] version `>= F7`
-* [OpenCore][1] `= 0.5.9`
 * Read [OpenCore Desktop Guide][20]
+* [OpenCore][1] `= 0.6.0`
 
 ## Installation
 
