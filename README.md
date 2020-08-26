@@ -4,7 +4,7 @@
 
 ### **Hardware configuration**
 
-* Intel Core i5 4590
+* Intel Core i7-4790
 * Gigabyte GA-H97-D3H-CF
 * 4×8GB Kingston DDR3 1600MHz
 * XFX Radeon RX 580 GTS XXX Edition 8GB (May work on any other versions)
