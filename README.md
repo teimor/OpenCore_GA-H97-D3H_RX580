@@ -69,7 +69,7 @@ You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to c
 
 ### Resources
 
-- [OcBinaryData][20] - For [Setting up OpenCore's GUI][19]
+- [OcBinaryData][20] - For [Setting up OpenCore's GUI][18]
 
 -----
 
@@ -176,7 +176,6 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 [3]: https://github.com/acidanthera/Lilu/releases
 [4]: https://github.com/acidanthera/VirtualSMC/releases
 [5]: https://github.com/acidanthera/WhateverGreen/releases
-
 [6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
 [7]: https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo
 [8]: https://github.com/acidanthera/IntelMausi/releases
