@@ -171,6 +171,22 @@ Use [one-key-hidpi][26] to Enable HiDPI on Dell monitor, and have a "Native" Sca
 
 Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission.
 
+---------------
+
+### Current System Kexts & Drivers Versions
+
+**Kexts**
+
+* [VirtualSMC.kext][4] - `VirtualSMC-1.1.5-RELEASE`
+* [Lilu.kext][3] - `Lilu-1.4.6-RELEASE`
+* [WhateverGreen.kext][5] - `WhateverGreen-1.4.1-RELEASE`
+* [AppleALC.kext][2] - `AppleALC-1.5.1-RELEASE`
+* [IntelMausi.kext][6] - `IntelMausi-1.0.3-RELEASE`
+
+**Drivers**
+
+* [HfsPlus.efi][7] - `Feb 29, 2020`
+
 [1]: https://github.com/acidanthera/OpenCorePkg/releases
 [2]: https://github.com/acidanthera/AppleALC/releases
 [3]: https://github.com/acidanthera/Lilu/releases
