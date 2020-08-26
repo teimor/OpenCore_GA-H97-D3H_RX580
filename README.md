@@ -52,7 +52,7 @@ You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to c
 
 ### EFI drivers
 
-* [HfsPlus.efi][19] - Needed for seeing HFS volumes(ie. macOS Installers and Recovery partitions/images).
+* [HfsPlus.efi][6] - Needed for seeing HFS volumes(ie. macOS Installers and Recovery partitions/images).
 * OpenRuntime.efi - Must have to work with native NVRAM
 * OpenCanopy.efi - For [OpenCore's GUI][18]
 
@@ -102,7 +102,7 @@ Please check `Config Example\config.plist` for post-install config example.
 #### Post-Install
 
 - `Misc -> Boot`
-  - Set `PickerMode` as `External` and add files from [Setting up OpenCore's GUI][19]
+  - Set `PickerMode` as `External` and add files from [Setting up OpenCore's GUI][18]
 - `Misc -> Security`
   - Set `ScanPolicy` to `983299` - for more information [Scanpolicy Docs][22]
 - `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args`:
@@ -176,7 +176,8 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 [3]: https://github.com/acidanthera/Lilu/releases
 [4]: https://github.com/acidanthera/VirtualSMC/releases
 [5]: https://github.com/acidanthera/WhateverGreen/releases
-[6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
+[6]: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
+
 [7]: https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo
 [8]: https://github.com/acidanthera/IntelMausi/releases
 [9]: https://github.com/acidanthera/AppleSupportPkg
@@ -185,8 +186,7 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 [15]: https://www.gigabyte.com/Motherboard/GA-H97-D3H-rev-10/support#support-dl-bios
 [16]: https://dortania.github.io/OpenCore-Install-Guide/
 [17]: https://github.com/korzhyk/OpenCore_GA-H97M-D3H
-[18]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui
-[19]: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
+[18]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencores-gui
 [20]:https://github.com/acidanthera/OcBinaryData
 [21]: https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit
 [22]: https://dortania.github.io/OpenCore-Post-Install/universal/security.html#scanpolicy
@@ -194,6 +194,7 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 [24]: https://www.aliexpress.com/item/33034394024.html
 [25]: https://github.com/korzhyk
 [26]: https://github.com/xzhih/one-key-hidpi
+
 [100]: _static/images/about.png "Abount this mac"
 [101]: _static/images/usb_mapping.png "USB Mapping"
 [102]: _static/images/bios_features.png "BIOS Features"
