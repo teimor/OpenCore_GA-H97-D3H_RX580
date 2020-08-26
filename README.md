@@ -9,13 +9,13 @@
 * 4×8GB Kingston DDR3 1600MHz
 * XFX Radeon RX 580 GTS XXX Edition 8GB (May work on any other versions)
 * Samsung 860 EVO 500GB (macOS)
-* [Fenvi FV-HB1200][24] WiFi BT PCIe Card (BCM94360CS2 Based)
+* [Fenvi FV-HB1200][11] WiFi BT PCIe Card (BCM94360CS2 Based)
 * Dell P2418D QHD (Monitor) 
 
 ### **Before you start make sure you have**
 
 * Working hardware
-* [BIOS][15] version `>= F7`
+* [BIOS][10] version `>= F7`
 * Read [OpenCore Desktop Guide][16]
 * [OpenCore][1] `= 0.5.9`
 
@@ -52,7 +52,7 @@ You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to c
 
 ### EFI drivers
 
-* [HfsPlus.efi][6] - Needed for seeing HFS volumes(ie. macOS Installers and Recovery partitions/images).
+* [HfsPlus.efi][7] - Needed for seeing HFS volumes(ie. macOS Installers and Recovery partitions/images).
 * OpenRuntime.efi - Must have to work with native NVRAM
 * OpenCanopy.efi - For [OpenCore's GUI][18]
 
@@ -64,7 +64,7 @@ You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to c
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [WhateverGreen.kext][5] - Need for iGPU support
 * [AppleALC.kext][2] - Getting audio to work as easy-peasy `layout-id = 1` defined in `SSDT-EXT.aml`
-* [IntelMausi.kext][8] - Intel driver for Ethernet 
+* [IntelMausi.kext][6] - Intel driver for Ethernet 
 * USBH97-D3H-CF.kext - Plist-only kext for USB port mapping
 
 ### Resources
@@ -96,7 +96,7 @@ Please check `Config Example\config.plist` for post-install config example.
 
 *This is an example for a dGPU(rx580) with DRM fix*
 
-- Populated `PlatformInfo > Generic` section in `config.plist`, can be easily done with `GenSMBIOS` please follow [OpenCore Desktop Guide][7].
+- Populated `PlatformInfo > Generic` section in `config.plist`, can be easily done with `GenSMBIOS` please follow [OpenCore Desktop Guide][97].
 - Add the `USBH97-D3H-CF.kext` depends on the model you use `iMac14,1 / iMac14,2 / iMac15,1 ` from `USB Kexts`. (Also add it to your config, you can see an example on `Config Example`)
 
 #### Post-Install
@@ -163,6 +163,8 @@ Use [one-key-hidpi][26] to Enable HiDPI on Dell monitor, and have a "Native" Sca
    4. Restart & enter into **macOS**.
 5. After reboot check everthing is working currectly and check SIP enabled by running `csrutil status` in Terminal.
 
+
+
 ## Issues
 
 1. None :)
@@ -192,22 +194,20 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 [3]: https://github.com/acidanthera/Lilu/releases
 [4]: https://github.com/acidanthera/VirtualSMC/releases
 [5]: https://github.com/acidanthera/WhateverGreen/releases
-[6]: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
+[6]: https://github.com/acidanthera/IntelMausi/releases
+[7]: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
 
-[7]: https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo
-[8]: https://github.com/acidanthera/IntelMausi/releases
-[9]: https://github.com/acidanthera/AppleSupportPkg
-[13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
-[14]: https://github.com/acidanthera/MacInfoPkg
-[15]: https://www.gigabyte.com/Motherboard/GA-H97-D3H-rev-10/support#support-dl-bios
+[10]: https://www.gigabyte.com/Motherboard/GA-H97-D3H-rev-10/support#support-dl-bios
+[11]: https://www.aliexpress.com/item/33034394024.html
+
 [16]: https://dortania.github.io/OpenCore-Install-Guide/
-[17]: https://github.com/korzhyk/OpenCore_GA-H97M-D3H
-[18]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencores-gui
-[20]:https://github.com/acidanthera/OcBinaryData
-[21]: https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit
-[22]: https://dortania.github.io/OpenCore-Post-Install/universal/security.html#scanpolicy
 [23]: https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html
-[24]: https://www.aliexpress.com/item/33034394024.html
+[97]: https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo
+[22]: https://dortania.github.io/OpenCore-Post-Install/universal/security.html#scanpolicy
+[21]: https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit
+[18]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencores-gui
+[20]: https://github.com/acidanthera/OcBinaryData
+
 [25]: https://github.com/korzhyk
 [26]: https://github.com/xzhih/one-key-hidpi
 
