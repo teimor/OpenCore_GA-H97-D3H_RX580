@@ -152,18 +152,9 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 
 
 
-## Changelog
 
-###### 01/08/2020 - Init
 
-- Added USB Mapping
-- USB Kexts for `iMac14,1 / iMac14,2 / iMac15,1 `
-- Config Examples
-- GA-H97-D3H-CF bios images
-- Using OpenCore's GUI
-- Based changed to OpenCore 0.5.9 & macOS Catalina 10.15.5
-- Added Changes for Gigabyte GA-H97-D3H-CF
-- Initial release (forked from [korzhyk/OpenCore_GA-H97M-D3H][17])
+Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission.
 
 [1]: https://github.com/acidanthera/OpenCorePkg/releases
 [2]: https://github.com/acidanthera/AppleALC/releases
