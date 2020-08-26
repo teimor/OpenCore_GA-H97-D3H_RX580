@@ -16,8 +16,8 @@
 
 * Working hardware
 * [BIOS][10] version `>= F7`
-* Read [OpenCore Desktop Guide][16]
 * [OpenCore][1] `= 0.5.9`
+* Read [OpenCore Desktop Guide][20]
 
 ## Installation
 
@@ -48,13 +48,13 @@
 
 ### ACPI
 
-You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to create your own - [SSDTs: The easy way][23]
+You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to create your own - [SSDTs: The easy way][21]
 
 ### EFI drivers
 
 * [HfsPlus.efi][7] - Needed for seeing HFS volumes(ie. macOS Installers and Recovery partitions/images).
 * OpenRuntime.efi - Must have to work with native NVRAM
-* OpenCanopy.efi - For [OpenCore's GUI][18]
+* OpenCanopy.efi - For [OpenCore's GUI][25]
 
 ### Kexts
 
@@ -69,7 +69,7 @@ You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to c
 
 ### Resources
 
-- [OcBinaryData][20] - For [Setting up OpenCore's GUI][18]
+- [OcBinaryData][26] - For [Setting up OpenCore's GUI][25]
 
 -----
 
@@ -96,15 +96,15 @@ Please check `Config Example\config.plist` for post-install config example.
 
 *This is an example for a dGPU(rx580) with DRM fix*
 
-- Populated `PlatformInfo > Generic` section in `config.plist`, can be easily done with `GenSMBIOS` please follow [OpenCore Desktop Guide][97].
+- Populated `PlatformInfo > Generic` section in `config.plist`, can be easily done with `GenSMBIOS` please follow [OpenCore Desktop Guide][22].
 - Add the `USBH97-D3H-CF.kext` depends on the model you use `iMac14,1 / iMac14,2 / iMac15,1 ` from `USB Kexts`. (Also add it to your config, you can see an example on `Config Example`)
 
 #### Post-Install
 
 - `Misc -> Boot`
-  - Set `PickerMode` as `External` and add files from [Setting up OpenCore's GUI][18]
+  - Set `PickerMode` as `External` and add files from [Setting up OpenCore's GUI][25]
 - `Misc -> Security`
-  - Set `ScanPolicy` to `983299` - for more information [Scanpolicy Docs][22]
+  - Set `ScanPolicy` to `983299` - for more information [Scanpolicy Docs][23]
 - `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args`:
   - Remove `-v` from your config.plist
 - `NVRAM -> Add -> D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14 -> UIScale`:
@@ -114,7 +114,7 @@ Please check `Config Example\config.plist` for post-install config example.
 
 ### USB mapping
 
-- First read - [macOS and the 15 Port Limit][21]
+- First read - [macOS and the 15 Port Limit][24]
 
 Due to these limits disabled interfaces are `HS05, HS06, HS07, HS08 and HS13`. Those are the two usb2 ports near the PS/2 ports & two internal USB 2.0 headers. In addition, interface `HS14` used by `Fenvi FV-HB1200` for bluetooth and configured as internal. I'm using all 15 available ports due the limit but If you want to use other ports use this mapping table and [schema][101] to edit the `Info.plist` file inside the `USBH97-D3H-CF.kext`.
 
@@ -202,13 +202,13 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 [10]: https://www.gigabyte.com/Motherboard/GA-H97-D3H-rev-10/support#support-dl-bios
 [11]: https://www.aliexpress.com/item/33034394024.html
 
-[16]: https://dortania.github.io/OpenCore-Install-Guide/
-[23]: https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html
-[97]: https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo
-[22]: https://dortania.github.io/OpenCore-Post-Install/universal/security.html#scanpolicy
-[21]: https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit
-[18]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencores-gui
-[20]: https://github.com/acidanthera/OcBinaryData
+[20]: https://dortania.github.io/OpenCore-Install-Guide/
+[21]: https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html
+[22]: https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo
+[23]: https://dortania.github.io/OpenCore-Post-Install/universal/security.html#scanpolicy
+[24]: https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit
+[25]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencores-gui
+[26]: https://github.com/acidanthera/OcBinaryData
 
 [90]: https://github.com/korzhyk
 [91]: https://github.com/xzhih/one-key-hidpi
