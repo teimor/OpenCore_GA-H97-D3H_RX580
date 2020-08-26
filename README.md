@@ -216,6 +216,5 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 [102]: _static/images/bios_features.png "BIOS Features"
 [103]: _static/images/bios_peripherals.png "BIOS Peripherals"
 [104]: _static/images/cfg_unlock.png "MSR 0xE2 off"
-[105]: _static/images/config_device_properties_rx580.png
-[106]: _static/images/dell_p2418d_hidpi.png
-
+[105]: _static/images/config_device_properties_rx580.png "Config RX580 device properties"
+[106]: _static/images/dell_p2418d_hidpi.png "Dell P2418D HIDPI enabled"
