@@ -147,14 +147,14 @@ Due to these limits disabled interfaces are `HS05, HS06, HS07, HS08 and HS13`. T
 
 ![dell_p2418d_hidpi][106]
 
-Use [one-key-hidpi][26] to Enable HiDPI on Dell monitor, and have a "Native" Scaled in System Preferences.
+Use [one-key-hidpi][91] to Enable HiDPI on Dell monitor, and have a "Native" Scaled in System Preferences.
 
 1. Turn **off** System Integrity Protection(SIP):
    1. Restart & enter into **Recovery**.
    2. Choose Utilities > Terminal.
    3. Run `csrutil disable`
    4. Restart & enter into **macOS**.
-2. Run [one-key-hidpi][26] script and set resolution config to `2560x1440 Display`
+2. Run [one-key-hidpi][91] script and set resolution config to `2560x1440 Display`
 3. Reboot and check that everthing is working currectly.
 4. Turn **on** System Integrity Protection(SIP):
    1. Restart & enter into **Recovery**.
@@ -171,7 +171,7 @@ Use [one-key-hidpi][26] to Enable HiDPI on Dell monitor, and have a "Native" Sca
 
 
 
-Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission.
+Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission.
 
 ---------------
 
@@ -208,8 +208,8 @@ Thanks to [Andrii Korzh][25] for his repsotory, knowledge sharing and permission
 [18]: https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencores-gui
 [20]: https://github.com/acidanthera/OcBinaryData
 
-[25]: https://github.com/korzhyk
-[26]: https://github.com/xzhih/one-key-hidpi
+[90]: https://github.com/korzhyk
+[91]: https://github.com/xzhih/one-key-hidpi
 
 [100]: _static/images/about.png "Abount this mac"
 [101]: _static/images/usb_mapping.png "USB Mapping"
