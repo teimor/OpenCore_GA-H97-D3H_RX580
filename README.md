@@ -165,7 +165,9 @@ Use [one-key-hidpi][91] to Enable HiDPI on Dell monitor, and have a "Native" Sca
    4. Restart & enter into **macOS**.
 5. After reboot check everthing is working currectly and check SIP enabled by running `csrutil status` in Terminal.
 
+#### Dual boot time sync fix
 
+Please follow this guide - [Dual boot time sync fix][92]
 
 ## Issues
 
@@ -212,7 +214,7 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 
 [90]: https://github.com/korzhyk
 [91]: https://github.com/xzhih/one-key-hidpi
-
+[92]: dual_boot_timesync_fix.md
 [100]: _static/images/about.png "Abount this mac"
 [101]: _static/images/usb_mapping.png "USB Mapping"
 [102]: _static/images/bios_features.png "BIOS Features"
