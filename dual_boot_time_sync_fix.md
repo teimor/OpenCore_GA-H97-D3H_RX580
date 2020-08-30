@@ -8,7 +8,7 @@ When running macOS & Windows at the same system time can be out of sync when cha
 
 ### Automatically
 
-1. Download [set_windows_store_utc_time.reg](_static/dual_boot_time sync_fix/set_windows_store_utc_time.reg)
+1. Download [set_windows_store_utc_time.reg](_static/dual_boot_time_sync_fix/set_windows_store_utc_time.reg)
 2. Run it as Administrator
 3. Restart
 
