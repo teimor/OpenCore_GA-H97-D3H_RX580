@@ -214,7 +214,7 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 
 [90]: https://github.com/korzhyk
 [91]: https://github.com/xzhih/one-key-hidpi
-[92]: dual_boot_timesync_fix.md
+[92]: dual_boot_time_sync_fix.md
 [100]: _static/images/about.png "Abount this mac"
 [101]: _static/images/usb_mapping.png "USB Mapping"
 [102]: _static/images/bios_features.png "BIOS Features"
