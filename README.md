@@ -17,7 +17,7 @@
 * Working hardware
 * [BIOS][10] version `>= F7`
 * Read [OpenCore Desktop Guide][20]
-* [OpenCore][1] `= 0.6.2`
+* [OpenCore][1] `= 0.6.3`
 
 ## Installation
 
@@ -183,11 +183,11 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 
 **Kexts**
 
-* [AppleALC.kext][2] - `AppleALC-1.5.3-RELEASE`
+* [AppleALC.kext][2] - `AppleALC-1.5.4-RELEASE`
 * [IntelMausi.kext][6] - `IntelMausi-1.0.4-RELEASE`
-* [Lilu.kext][3] - `Lilu-1.4.8-RELEASE`
-* [VirtualSMC.kext][4] - `VirtualSMC-1.1.7-RELEASE`
-* [WhateverGreen.kext][5] - `WhateverGreen-1.4.3-RELEASE`
+* [Lilu.kext][3] - `Lilu-1.4.9-RELEASE`
+* [VirtualSMC.kext][4] - `VirtualSMC-1.1.8-RELEASE`
+* [WhateverGreen.kext][5] - `WhateverGreen-1.4.4-RELEASE`
 
 **Drivers**
 
