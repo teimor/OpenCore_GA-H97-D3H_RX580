@@ -17,7 +17,7 @@
 * Working hardware
 * [BIOS][10] version `>= F7`
 * Read [OpenCore Desktop Guide][20]
-* [OpenCore][1] `= 0.6.3`
+* [OpenCore][1] `= 0.6.7`
 
 ## Installation
 
@@ -90,7 +90,7 @@ Please check `Config Example\config.plist` for post-install config example.
 - Fix DRM for RX580, under `DeviceProperties` add `PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)` dictionary with:
   - `shikigva` = `80` [Number]
 - Set AppleALC, under `DeviceProperties` add `PciRoot(0x0)/Pci(0x1B,0x0)` dictionary with:
-  - `alc-layout-id` = `01000000` [Data]
+  - `alc-layout-id` = `63000000` [Data]
 
 ![DeviceProperties_rx580][105]
 
@@ -183,11 +183,11 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 
 **Kexts**
 
-* [AppleALC.kext][2] - `AppleALC-1.5.4-RELEASE`
-* [IntelMausi.kext][6] - `IntelMausi-1.0.4-RELEASE`
-* [Lilu.kext][3] - `Lilu-1.4.9-RELEASE`
-* [VirtualSMC.kext][4] - `VirtualSMC-1.1.8-RELEASE`
-* [WhateverGreen.kext][5] - `WhateverGreen-1.4.4-RELEASE`
+* [AppleALC.kext][2] - `AppleALC-1.5.8-RELEASE`
+* [IntelMausi.kext][6] - `IntelMausi-1.0.5-RELEASE`
+* [Lilu.kext][3] - `Lilu-1.5.1-RELEASE`
+* [VirtualSMC.kext][4] - `VirtualSMC-1.2.1-RELEASE`
+* [WhateverGreen.kext][5] - `WhateverGreen-1.4.8-RELEASE`
 
 **Drivers**
 
