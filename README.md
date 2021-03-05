@@ -90,7 +90,7 @@ Please check `Config Example\config.plist` for post-install config example.
 - Fix DRM for RX580, under `DeviceProperties` add `PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)` dictionary with:
   - `shikigva` = `80` [Number]
 - Set AppleALC, under `DeviceProperties` add `PciRoot(0x0)/Pci(0x1B,0x0)` dictionary with:
-  - `alc-layout-id` = `01000000` [Data]
+  - `alc-layout-id` = `63000000` [Data]
 
 ![DeviceProperties_rx580][105]
 
