@@ -17,7 +17,7 @@
 * Working hardware
 * [BIOS][10] version `>= F7`
 * Read [OpenCore Desktop Guide][20]
-* [OpenCore][1] `= 0.6.8`
+* [OpenCore][1] `= 0.6.9`
 
 ## Installation
 
@@ -63,7 +63,7 @@ You can use `SSDT-EC.aml` and `SSDT-PLUG.aml` files, but it probably better to c
   * SMCSuperIO.kext - Used for monitoring fan speed.
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 * [WhateverGreen.kext][5] - Need for iGPU support
-* [AppleALC.kext][2] - Getting audio to work as easy-peasy `layout-id = 1` defined in `SSDT-EXT.aml`
+* [AppleALC.kext][2] - Getting audio to work as easy-peasy.
 * [IntelMausi.kext][6] - Intel driver for Ethernet 
 * USBH97-D3H-CF.kext - Plist-only kext for USB port mapping
 
@@ -81,23 +81,28 @@ Please check `Config Example\config.plist` for post-install config example.
 
 #### Pre-Install
 
+**Set iGPU/dGPU config**
+
 - If you are using dGPU (for example: AMD RX580), under `DeviceProperties` → `PciRoot(0x0)/Pci(0x2,0x0)` :
-  - `AAPL,ig-platform-id` = `04001204` [Data]
-  - `device-id` = `12040000` [Data]
+  - `AAPL,ig-platform-id` = `04001204` [Data] - iGPU is only used for compute tasks
+  - `device-id` = `12040000` [Data] - Fake in case you have an HD 4400 
 - If you are using just the iGPU, set `DeviceProperties` → `PciRoot(0x0)/Pci(0x2,0x0)` :
-  - `AAPL,ig-platform-id` = `0300220D` [Data]
-  - `device-id` = `12040000` [Data]
+  - `AAPL,ig-platform-id` = `0300220D` [Data] - iGPU is used to drive a display
+  - `device-id` = `12040000` [Data] - Fake in case you have an HD 4400 
 - Fix DRM for RX580, under `DeviceProperties` add `PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)` dictionary with:
+  *Not needed for Big Sur*
   - `shikigva` = `80` [Number]
+
+**Set audio with AppleALC**
+
 - Set AppleALC, under `DeviceProperties` add `PciRoot(0x0)/Pci(0x1B,0x0)` dictionary with:
   - `layout-id` = `63000000` [Data]
 
-![DeviceProperties_rx580][105]
-
-*This is an example for a dGPU(rx580) with DRM fix*
+**Platfom information & USB**
 
 - Populated `PlatformInfo > Generic` section in `config.plist`, can be easily done with `GenSMBIOS` please follow [OpenCore Desktop Guide][22].
-- Add the `USBH97-D3H-CF.kext` depends on the model you use `iMac14,1 / iMac14,2 / iMac15,1 ` from `USB Kexts`. (Also add it to your config, you can see an example on `Config Example`)
+- Add the `USBH97-D3H-CF.kext` depends on the model you use `iMac14,1 / iMac14,2 / iMac15,1 / iMacPro1,1 ` from `USB Kexts`. (Also add it to your config, you can see an example on `Config Example`)
+- Big Sur if you are using any supported AMD dGPU my recommendation is using `iMacPro1,1` SMBIOS.
 
 #### Post-Install
 
@@ -109,6 +114,17 @@ Please check `Config Example\config.plist` for post-install config example.
   - Remove `-v` from your config.plist
 - `NVRAM -> Add -> D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14 -> UIScale`:
   - One-byte data defining boot.efi user interface scaling. Should be `01` for normal screens and `02` for HiDPI screens. (When using Dell P2418D set it to `02`)
+
+**DRM Compatibility on macOS Big Sur**
+
+[*Source: WhateverGreen documentation*][93]
+
+- `defaults write com.apple.AppleGVA gvaForceAMDKE -boolean yes` forces AMD DRM decoder for streaming services (like Apple TV and iTunes movie streaming)
+- `defaults write com.apple.AppleGVA gvaForceAMDAVCDecode -boolean yes` forces AMD AVC accelerated decoder
+- `defaults write com.apple.AppleGVA gvaForceAMDAVCEncode -boolean yes` forces AMD AVC accelerated encoder
+- `defaults write com.apple.AppleGVA gvaForceAMDHEVCDecode -boolean yes` forces AMD HEVC accelerated decoder
+- `defaults write com.apple.AppleGVA disableGVAEncryption -string YES` forces AMD HEVC accelerated decoder
+- `defaults write com.apple.coremedia hardwareVideoDecoder -string force` forces hardware accelerated video decoder (for any resolution)
 
 ----
 
@@ -183,10 +199,10 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 
 **Kexts**
 
-* [AppleALC.kext][2] - `AppleALC-1.5.9-RELEASE`
-* [IntelMausi.kext][6] - `IntelMausi-1.0.5-RELEASE`
-* [Lilu.kext][3] - `Lilu-1.5.2-RELEASE`
-* [VirtualSMC.kext][4] - `VirtualSMC-1.2.2-RELEASE`
+* [AppleALC.kext][2] - `AppleALC-1.6.0-RELEASE`
+* [IntelMausi.kext][6] - `IntelMausi-1.0.6-RELEASE`
+* [Lilu.kext][3] - `Lilu-1.5.3-RELEASE`
+* [VirtualSMC.kext][4] - `VirtualSMC-1.2.3-RELEASE`
 * [WhateverGreen.kext][5] - `WhateverGreen-1.4.9-RELEASE`
 
 **Drivers**
@@ -215,6 +231,7 @@ Thanks to [Andrii Korzh][90] for his repsotory, knowledge sharing and permission
 [90]: https://github.com/korzhyk
 [91]: https://github.com/xzhih/one-key-hidpi
 [92]: dual_boot_time_sync_fix.md
+[93]: https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md#drm-compatibility-on-macos-11 "WhateverGreen - Fix DRM on BigSur"
 [100]: _static/images/about.png "Abount this mac"
 [101]: _static/images/usb_mapping.png "USB Mapping"
 [102]: _static/images/bios_features.png "BIOS Features"
